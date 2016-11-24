@@ -1,0 +1,3 @@
+AppBundle\Entity\PostalCode:
+    PostalCode{1..40}:
+      PostalCode: <postCode()>

@@ -1,0 +1,9 @@
+AppBundle\Entity\User:
+  User{1..20}:
+    email: <email()>
+    password: <password()>
+    houseNumber: <buildingNumber()>
+    street: <streetName()>
+    #locality: @locality*
+    #town: @town*
+    #postalCode: @postalCode*

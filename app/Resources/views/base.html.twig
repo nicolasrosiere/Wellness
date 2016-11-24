@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% include'_partials/head.html.twig' %}
+
+    <title> {% block title %} Annuaire Bien-Être {% endblock %}</title>
+
+</head>
+
+
+<body>
+<div class="page-wrapper">
+
+
+    {% include '_partials/header.html.twig' %}
+    {# lien qui inclut le header de la page #}
+
+    <div class="main">
+        <div class="main-inner">
+            <div class="container">
+                <div class="content">
+                    {% block document_title %}
+                        <div class="document-title">
+                            <h1>Annuaire Bien - Être</h1>
+                        </div><!-- /.document-title -->
+                    {% endblock %}
+
+                    {% block body %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {% include '_partials/scripts.html.twig' %}
+    {# fichiers Js contenu dans le dossier __partials #}
+
+
+    {% include '_partials/footer.html.twig' %}
+    {# lien qui inclut le footer de la page d'accueil #}
+
+</div>
+</body>
+</html>

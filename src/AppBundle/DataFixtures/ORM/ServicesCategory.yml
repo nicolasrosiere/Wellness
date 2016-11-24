@@ -1,0 +1,6 @@
+AppBundle\Entity\ServicesCategory:
+  ServicesCategory{1..20}:
+    name: <sentence($nbWords = 5)>
+    description: <sentences($nb = 4)
+    #providers: '@Provider*'
+    #servicesCategory: '@Image*'

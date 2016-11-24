@@ -1,0 +1,8 @@
+AppBundle\Entity\Comment:
+  Comment{1..30}:
+    rating: <numberBetween($min = 0, $max = 10)>
+    title: <sentence($nb = 6)>
+    content: <text($maxNbChars = 300)>
+    surfer: '@Surfer*'
+    provider: '@Provider*'
+#    abuse: '@Abuse*'

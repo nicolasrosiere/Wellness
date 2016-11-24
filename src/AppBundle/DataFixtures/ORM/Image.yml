@@ -1,0 +1,18 @@
+AppBundle\Entity\Image:
+  Image{1..20}:
+    description: <sentence($nbWords = 10)>
+    url: <imageUrl($width = 300, $height = 200)>
+    imageType: <imageType()>
+    user: '@Provider*'
+
+  Image{21..30}:
+    description: <sentence($nbWords = 10)>
+    url: <imageUrl($width = 300, $height = 200)>
+    imageType: <imageType()>
+    user: '@Surfer*'
+
+  Image{31..40}:
+    description: <sentence($nbWords = 10)>
+    url: <imageUrl($width = 300, $height = 200)>
+    imageType: <imageType()>
+    servicesCategory: '@ServicesCategory*'

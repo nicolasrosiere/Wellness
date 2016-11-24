@@ -1,0 +1,3 @@
+AppBundle\Entity\Town:
+  Town{1..40}:
+    Town: <city()>

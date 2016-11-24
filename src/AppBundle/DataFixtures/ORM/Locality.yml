@@ -1,0 +1,3 @@
+AppBundle\Entity\Locality:
+    locality{1..40}:
+      locality: <state()>

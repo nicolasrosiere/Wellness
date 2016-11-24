@@ -1,0 +1,25 @@
+
+
+
+
+AppBundle\Entity\Surfer:
+  Surfer{1..20}:
+    email (unique): <email()>
+    password (unique): <password()>
+    houseNumber: <buildingNumber()>
+    street: <streetName()>
+    inscription: <dateTimeThisMonth($max = 'now')>
+    userType: <userType()>
+    testing: 3
+    outcast: false
+    inscriptionConfirmed: false
+    locality: '@locality*'
+    town: '@Town*'
+    postalCode: '@PostalCode*'
+  # images: '@Image*'
+    name: <lastName()>
+    firstname: <firstName()>
+    newsletter: <boolean()>
+#    position: '@BlockPosition*'
+#    abuse: '@Abuse*'
+

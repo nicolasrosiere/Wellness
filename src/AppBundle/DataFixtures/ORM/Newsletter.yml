@@ -1,0 +1,5 @@
+Appbundle\Entity\Newsletter:
+  Newsletter{1..20}:
+    title: <sentence($nbWords=6)>
+    publication: <dateTime($max = 'now')>
+    pdf: <url>

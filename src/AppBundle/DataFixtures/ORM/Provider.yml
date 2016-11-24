@@ -1,0 +1,27 @@
+AppBundle\Entity\Provider:
+  Provider{1..20}:
+    email (unique): <email()>
+    password (unique): <password()>
+    houseNumber: <buildingNumber()>
+    street: <streetName()>
+    inscription: <dateTimeThisMonth($max = 'now')>
+    userType: <userType()>
+    testing: 3
+    outcast: false
+    inscriptionConfirmed: false
+    locality: '@locality*'
+    town: '@Town*'
+    postalCode: '@PostalCode*'
+    #    images: '@Image*'
+    email (unique): <email()>
+    name (unique): <company()>
+    website (unique): <url()>
+    providerMail (unique): <email()>
+    phoneNumber: <phoneNumber()>
+    tva: <randomNumber($nbDigits = 8)>
+    categories: '<numberBetween(1,4)>x @ServicesCategory*'
+   # promotions: '@Promotion*'
+   # traineeship: '@Traineeship*'
+   # comments: '@Comment*'
+
+

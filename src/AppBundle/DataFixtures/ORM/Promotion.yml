@@ -1,0 +1,11 @@
+AppBundle\Entity\Promotion:
+  promotion{1..20}:
+    name: <word>
+    description: <text($maxNbChars = 30)>
+    pdf: <url>
+    beginDate: <dateTimeBetween($startDate='now', $endDate = '3 months', $timezone = date_default_timezone_get())>
+    endDate: <dateTimeBetween($startDate='3 months', $endDate = '6 months', $timezone = date_default_timezone_get())>
+    beginDisplay: <dateTimeBetween($startDate='now', $endDate = '3 months', $timezone = date_default_timezone_get())>
+    endDisplay: <dateTimeBetween($startDate='3 months', $endDate = '6 months', $timezone = date_default_timezone_get())>
+    category: '@ServicesCategory*'
+    provider: '@Provider*'

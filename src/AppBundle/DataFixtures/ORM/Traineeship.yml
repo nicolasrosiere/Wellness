@@ -1,0 +1,11 @@
+AppBundle\Entity\TraineeShip:
+  TraineeShip{1..20}:
+    name: <sentence($nbWords = 3)>
+    description: <text($nbMaxChars = 40)>
+    price: <numberBetween($min = 0, $max = 1000)>
+    information: <text($nbMaxChars = 30)>
+    beginDate: <dateTimeBetween($startDate='now', $endDate = '1 months', $timezone = date_default_timezone_get())>
+    endDate: <dateTimeBetween($startDate='2 months', $endDate = '3 months', $timezone = date_default_timezone_get())>
+    beginDisplay: <dateTimeBetween($startDate='now', $endDate = '1 months', $timezone = date_default_timezone_get())>
+    endDisplay: <dateTimeBetween($startDate='2 months', $endDate = '3 months', $timezone = date_default_timezone_get())>
+    provider: '@Provider*'
