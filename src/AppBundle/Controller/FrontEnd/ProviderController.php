@@ -17,14 +17,14 @@ class ProviderController extends Controller{
      * @Route("/provider/listing", name="listing_provider")
      *
      */
-    public function listAction(Request $request)
+    public function listAction()
     {
 
-        $res = $request->query->get('a');
-        $repo = $this->getDoctrine()->getManager()->getRepository('AppBundle\Entity\Provider');
-        $providers = $repo->findAll($res); /* => on va chercher tous les prestataires pour les afficher sur une seule page */
 
-        /* Affichage de tous les prestataires du blog*/
+        $repo = $this->getDoctrine()->getManager()->getRepository('AppBundle\Entity\Provider');
+        $providers = $repo->personalFindAll(); /* => on va chercher tous les prestataires pour les afficher sur une seule page */
+
+        /* Affichage de tous les prestataires du blog */
 
         return $this->render('FrontEnd/Provider/providerListing.html.twig', ['providers' => $providers]);
     }
@@ -43,9 +43,10 @@ class ProviderController extends Controller{
             ->getRepository('AppBundle\Entity\Provider')
         ;
 
-        $provider = $repo->find($id);
+        $provider = $repo->OneProvider($id);
 
-        return $this->render('FrontEnd/Provider/providerDetail.html.twig', ['provider' => $provider]);
+
+        return $this->render('FrontEnd/Provider/providerDetail.html.twig', ['provider' => $provider[0]]); /* la variable provider est un tableau */
     }
 
 }

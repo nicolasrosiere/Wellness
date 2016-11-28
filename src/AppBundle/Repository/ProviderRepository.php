@@ -10,5 +10,35 @@ namespace AppBundle\Repository;
  */
 class ProviderRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function personalFindAll(){
+        $qb = $this->createQueryBuilder('p');
 
+        $qb->select('p')
+            ->orderBy('p.name', 'ASC');
+
+        $query = $qb->getQuery();
+
+        $results = $query->execute();
+
+        return $results;
+    }
+
+    public function OneProvider($id){
+        $qb = $this->createQueryBuilder('p');
+
+        $qb->select('p')
+            ->where('p.id ='.$id)
+            ->leftJoin('p.town', 't')
+            ->addSelect('t')
+            ->leftJoin('p.locality', 'l')
+            ->addSelect('l')
+            ->leftJoin('p.postalCode', 'pc')
+            ->addSelect('pc');
+
+        $query = $qb->getQuery();
+
+        $result = $query->execute();
+
+        return $result;
+    }
 }

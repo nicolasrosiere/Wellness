@@ -1,6 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Liste des prestataires {% endblock %}
 
 {% block body %}
 
@@ -10,6 +9,16 @@
             <div class="main-inner">
                 <div class="container">
                     <div class="content">
+
+
+                        <div class="document-title">
+                            <h1>Grid Version</h1>
+
+                            <ul class="breadcrumb">
+                                <li><a href="#">Superlist</a></li>
+                                <li><a href="#">Listing</a></li>
+                            </ul>
+                        </div><!-- /.document-title -->
 
 
 
@@ -63,7 +72,8 @@
 
 
                         <h2 class="page-title">
-                            <!-- 1802 results matching your query --> <!-- On doit afficher le nombre de résultats obtenus sur cette page-->
+                <!-- 1802 results matching your query --> <!-- On doit afficher le nombre de résultats obtenus sur cette page-->
+
 
                             <form method="get" action="?" class="filter-sort">
                                 <div class="form-group">
@@ -115,11 +125,15 @@
 
                                 {% endfor %}
 
+
+
                             </div><!-- /.row -->
                         </div><!-- /.cards-simple-wrapper -->
 
 
                         <!--<div class="pager"> ON VA CREER LA PAGINATION SI LE NOMBRE DE PRESTATAIRES EST TROP GRAND !!!!
+
+                        <div class="pager">
                             <ul>
                                 <li><a href="#">Prev</a></li>
                                 <li><a href="#">5</a></li>
@@ -139,6 +153,3 @@
     </div><!-- /.page-wrapper -->
 
 {% endblock %}
-
-{% block footer %} {{ parent() }} {% endblock %}
-
